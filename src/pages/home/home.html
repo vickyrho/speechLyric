@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title >
+      IONIC RECORD
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <button ion-button full (click)="getPermissions()">Allow Permission </button>
+  <button ion-button full (click)="startListening()">Speak</button>
+  <ion-card-header>Speech results</ion-card-header>
+  <ion-card-content>
+    <ion-list>
+      <ion-item *ngFor="let match of matches">
+        {{ match }}
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+    <br>
+
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="newString" > type here</ion-input>
+    </ion-item>
+
+    <button ion-button (click)="showLyricsLink()" >fetchLyrics</button>
+
+
+  <ion-card *ngFor="let result of resultData; let i  = index" style="background: #2d67ff ; color: white" >
+
+    <ion-card-content (click)="displayLink(i)"  >
+
+      {{ result.title }}<br>
+      {{ result.displayLink }}<br>
+      {{ result.snippet }}<br>
+
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>
