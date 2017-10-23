@@ -27,7 +27,7 @@ export class MainClass {
   }
 
   fetchLyrics(data) : Observable<any> {
-    return this.http.post('http://localhost:5000/fetch',data)
+    return this.http.post('http://192.168.43.192:5000/fetch',data)
       .map(data => {
         console.log(data.json());
         return data.json();

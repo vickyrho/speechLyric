@@ -26,10 +26,13 @@
 
     <button ion-button (click)="showLyricsLink()" >fetchLyrics</button>
 
+    <button ion-button (click)="showDirectory()">Show</button>
 
-  <ion-card *ngFor="let result of resultData; let i  = index" style="background: #2d67ff ; color: white" >
 
-    <ion-card-content (click)="displayLink(i)"  >
+
+  <ion-card *ngFor="let result of resultData; let i  = index" style="background: #2d67ff ; color: white"  >
+
+    <ion-card-content (click)="displayLink(i)">
 
       {{ result.title }}<br>
       {{ result.displayLink }}<br>
@@ -37,6 +40,7 @@
 
     </ion-card-content>
   </ion-card>
+
 
 
 </ion-content>

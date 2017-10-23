@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar [color]="primary">
+    <ion-title [color]="primary">
+      Audio
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+<ion-card *ngFor="let item of Downloads" >
+
+  <ion-card-content style="background: #e9b417 ; color: black ">
+    {{ item.name }}
+  </ion-card-content>
+
+</ion-card>
+
+</ion-content>
